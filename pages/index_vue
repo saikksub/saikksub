@@ -1,0 +1,89 @@
+<template>
+  <div>
+    <div class="relative h-screen graph-paper-bg mt-12">
+      <div class="flex h-full block m-auto items-center">
+        <div
+          class="mx-auto block text-center"
+          style="width: auto; max-width: 600px;"
+        >
+          <img
+            class="rounded-full block m-auto shadow-lg"
+            src="https://www.gravatar.com/avatar/74de62a2ed22b805fca37378d24ce921?s=180"
+          />
+          <div class="my-6">
+            <h1 class="font-bold text-2xl">
+              Kiran Sai Subramanyam K
+            </h1>
+            <h2 class="text-xl mx-2 text-gray-600">
+              Full-time Freelance Software Engineer &amp;<br />
+              Astronomy Enthusiast
+            </h2>
+          </div>
+          <p class="mx-2 text-black">
+            I design, create and build cross-platform software applications and
+            tools.
+          </p>
+          <div
+            class="hidden md:flex lg:flex xl:flex justify-around w-full h-16 items-center mt-4"
+          >
+            <a
+              href="https://join.skype.com/invite/e2525WipITkz"
+              class="relative h-10 w-32 mx-2 rounded hover:shadow-xl"
+              style="background-color: #00AFF0;"
+            >
+              <div class="flex justify-center h-full items-center">
+                <img
+                  class="w-4 h-auto white-fill"
+                  src="@/assets/vector/icons-svg/social/skype-dark.svg"
+                />
+                <p class="ml-2 font-bold text-white">Contact</p>
+              </div>
+            </a>
+            <a
+              href="https://github.com/saikksub"
+              class="relative bg-white h-10 w-32 mx-2 rounded hover:shadow-xl"
+              style="background-color: #000000;"
+            >
+              <div class="flex justify-center h-full items-center">
+                <img
+                  class="w-4 h-auto"
+                  src="@/assets/vector/icons-svg/social/github-dark.svg"
+                />
+                <p class="ml-2 font-bold text-white">Code</p>
+              </div>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/saikksub"
+              class="relative bg-white h-10 w-32 mx-2 rounded hover:shadow-xl"
+              style="background-color: #0077B5;"
+            >
+              <div class="flex justify-center h-full items-center">
+                <img
+                  class="w-4 h-auto"
+                  src="@/assets/vector/icons-svg/social/linkedin-dark.svg"
+                />
+                <p class="ml-2 font-bold text-white">Connect</p>
+              </div>
+            </a>
+            <a
+              href="https://twitter.com/saikksub"
+              class="relative bg-white h-10 w-32 mx-2 rounded hover:shadow-xl"
+              style="background-color: #1DA1F2;"
+            >
+              <div class="flex justify-center h-full items-center">
+                <img
+                  class="w-4 h-auto"
+                  src="@/assets/vector/icons-svg/social/twitter-dark.svg"
+                />
+                <p class="ml-2 font-bold text-white">Follow</p>
+              </div>
+            </a>
+          </div>
+          <p class="mt-5 text-gray-600 text-xs">
+            Copyright &copy; Saikksub 2019-2020. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
