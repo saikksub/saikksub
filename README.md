@@ -1,22 +1,7 @@
-# saikksub
+# About Me
 
-> Kiran Sai Subramanyam K
+My name is **Kiran Sai Subramanyam K**, you can call me **Sai**!
 
-## Build Setup
+I am a professional software developer with 6+ years of experience. I develop and deploy cross-platform software applications. My job is to build your application software that is easy to use and functional.
 
-``` bash
-# install dependencies
-$ npm run install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+Moreover, I add a personal touch to your application. So that it is user-friendly and at the same time attractive.
