@@ -29,7 +29,7 @@
 <script setup>
 useHead({
   htmlAttrs: {
-    class: 'h-full bg-white dark:bg-black'
+    class: 'dark'
   }
 })
 
