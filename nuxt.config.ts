@@ -13,8 +13,23 @@ export default defineNuxtConfig({
   modules: [
     '@vueuse/nuxt',
     '@pinia/nuxt',
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxt/content',
+    '@nuxt/ui'
   ],
+  content: {
+    // https://content.nuxtjs.org/api/configuration
+    highlight: {
+      theme: {
+        // Default theme (same as single string)
+        default: 'github-light',
+        // Theme used if `html.dark`
+        dark: 'github-dark',
+        // Theme used if `html.sepia`
+        sepia: 'monokai'
+      }
+    }
+  },
   build: {
     transpile: ['@heroicons/vue'],
     postcss: {
