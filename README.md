@@ -1,7 +1,50 @@
-# About Me
+# Nuxt 3 Minimal Starter
 
-My name is **Kiran Sai Subramanyam K**, you can call me **Sai**!
+Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-I am a professional software developer with 6+ years of experience. I develop and deploy cross-platform software applications. My job is to build your application software that is easy to use and functional.
+## Setup
 
-Moreover, I add a personal touch to your application. So that it is user-friendly and at the same time attractive.
+Make sure to install the dependencies:
+
+```bash
+# yarn
+yarn install
+
+# npm
+npm install
+
+# pnpm
+pnpm install
+```
+
+## Fonts
+
+```
+font-family: 'DM Mono', monospace;
+font-family: 'Poppins', sans-serif;
+font-family: 'Work Sans', sans-serif;
+```
+
+## Development Server
+
+Start the development server on `http://localhost:3000`
+
+```bash
+npm run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+npm run build
+```
+
+Locally preview production build:
+
+```bash
+npm run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

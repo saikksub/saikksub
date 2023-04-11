@@ -1,21 +1,22 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = {
-  darkMode: 'class',
   content: [
     "./components/**/*.{vue,js}",
     "./layouts/**/*.vue",
     "./pages/**/*.vue",
     "./plugins/**/*.{js,ts}",
-    "./nuxt.config.{js,ts}"
+    "./nuxt.config.{js,ts}",
+    "./node_modules/flowbite/**/*.js",
   ],
   theme: {
     extend: {
-      colors: {
-        primary: '#4f46e5'
-      }
-    }
+      fontFamily: {
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        mono: ["DM Mono", ...defaultTheme.fontFamily.mono],
+        poppins: ["Poppins", "sans-serif"],
+      },
+    },
   },
-  plugins: [
-    require('@tailwindcss/forms')
-  ]
-}
+};

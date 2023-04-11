@@ -1,43 +1,16 @@
 {
-  "version": "2.2.29",
-  "author": {
-    "email": "saikksub@gmail.com",
-    "name": "Kiran Sai Subramanyam Kalimisetty",
-    "url": "https://github.com/saikksub"
-  },
+  "name": "nuxt-app",
   "private": true,
-  "engines": {
-    "node": "16"
-  },
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "upgrade": "npx nuxi-edge@latest upgrade --force",
-    "clean": "rm -rf .nuxt .output",
-    "reinstall": "rm -rf .nuxt .output node_modules && yarn"
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/content": "^2.1.1",
-    "@nuxt/ui": "^0.3.3",
-    "@vueuse/core": "^8.9.4",
-    "nuxt": "^3.0.0-rc.11",
-    "tailwindcss": "^3.1.6"
-  },
-  "dependencies": {
-    "@headlessui/vue": "^1.6.7",
-    "@heroicons/vue": "^1.0.6",
-    "@nuxtjs/tailwindcss": "^5.3.3",
-    "@pinia/nuxt": "0.4.0",
-    "@tailwindcss/forms": "^0.5.2",
-    "@vueuse/nuxt": "^8.9.4",
-    "nanoid": "^4.0.0",
-    "pinia": "^2.0.16",
-    "vee-validate": "^4.6.6",
-    "vue-draggable-next": "^2.1.1",
-    "vue-grid-layout": "^2.4.0",
-    "vuedraggable": "^4.1.0",
-    "yup": "^0.32.11"
+    "@nuxtjs/tailwindcss": "^6.6.5",
+    "nuxt": "^3.3.3",
+    "nuxt-icon": "^0.3.3"
   }
 }
