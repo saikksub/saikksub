@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  extends: "@nuxt-themes/typography",
   app: {
     head: {
       link: [
@@ -20,5 +21,11 @@ export default defineNuxtConfig({
       ],
     },
   },
-  modules: ["@nuxtjs/tailwindcss", "nuxt-icon"],
+  modules: ["@nuxtjs/tailwindcss", "nuxt-icon", "@nuxt/content", "@pinia/nuxt"],
+  content: {
+    highlight: {
+      // Theme used in all color schemes.
+      theme: "github-dark",
+    },
+  },
 });

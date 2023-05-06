@@ -1,8 +1,11 @@
 <template>
   <div class="h-10 flex items-center border-b">
-    <p class="hidden md:block font-semibold font-poppins text-sm">
+    <nuxt-link
+      to="/"
+      class="hidden md:block font-semibold font-poppins text-sm"
+    >
       Kiran Sai Subramanyam K
-    </p>
+    </nuxt-link>
     <p class="block md:hidden font-semibold font-poppins text-sm">Kiran Sai</p>
 
     <div class="grow" />

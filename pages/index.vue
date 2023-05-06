@@ -1,96 +1,66 @@
 <template>
-  <section class="hidden lg:block">
-    <div class="grid grid-cols-12 gap-0 h-[100vh]">
-      <div class="col-span-12 lg:col-span-6 relative">
-        <div
-          class="z-40 absolute top-0 right-0 md:-right-[120px] bottom-0 left-0"
-        >
-          <div class="flex items-center h-full">
-            <div>
-              <h1
-                class="text-left lg:text-5xl xl:text-7xl font-bold font-poppins text-indigo-900 leading-tight"
-              >
-                Inclusive Design &amp;<br />
-                Full-stack Software Development
-              </h1>
-
-              <div class="w-full max-w-screen-sm space-y-4">
-                <p class="mt-12 text-2xl mt-4 font-worksans leading-relaxed">
-                  I'm a full-stack developer, freelancer, and managing director
-                  of Xplorebits HQ from India.
-                </p>
-                <p class="mt-12 text-2xl mt-4 font-worksans leading-relaxed">
-                  I work with companies and agencies around the globe, building
-                  full-stack web applications and digital products using
-                  JavaScript frameworks and technologies.
-                </p>
-                <p class="mt-12 text-2xl mt-4 font-worksans leading-relaxed">
-                  <nuxt-link
-                    class="underline"
-                    to="https://upwork.com/fl/saikksub"
-                    target="_blank"
-                  >
-                    Hire me
-                  </nuxt-link>
-                  at
-                  <icon class="ml-1" name="logos:upwork" size="98" />
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="hidden md:block col-span-4 lg:col-span-6 bg-yellow-0">
-        <div class="flex items-center justify-end h-full">
+  <div>
+    <div v-for="item in articles" class="border-b pb-6 border-gray-100">
+      <div class="grid grid-cols-12 gap-6">
+        <div class="col-span-3">
           <div
-            class="relative w-[200px] h-[200px] lg:h-[400px] lg:w-[400px] xl:w-[512px] xl:h-[512px]"
-          >
-            <div class="z-5 absolute w-full h-full bg-gray-200 rotate-6" />
-            <div
-              class="z-10 absolute w-full h-full rotate-0 bg-no-repeat bg-cover bg-center shadow-2xl"
-              style="
-                background-image: url('https://res.cloudinary.com/do8ksgdgc/image/upload/v1681195700/IMG_2403-2_gmc4rf.jpg');
-              "
-            />
-          </div>
+            class="w-full h-full bg-no-repeat bg-center bg-cover"
+            :style="{ 'background-image': `url(${item.imageUrl})` }"
+          />
+        </div>
+        <div class="col-span-9 space-y-4">
+          <nuxt-link :to="item._path">
+            <h1 class="text-2xl font-bold">
+              {{ item.title }}
+            </h1>
+          </nuxt-link>
+          <p class="text-gray-500">
+            {{ item.description }}
+          </p>
+          <p class="text-xs space-x-2">
+            <span>
+              {{ item.timeString }}
+            </span>
+            <span>
+              <span class="text-black">By</span>
+              <nuxt-link
+                to="https://www.linkedin.com/in/saikksub/"
+                class="text-xs text-blue-900"
+              >
+                Kiran Sai Subramanyam K
+              </nuxt-link>
+            </span>
+          </p>
         </div>
       </div>
     </div>
-  </section>
-
-  <!-- Mobile section -->
-  <section class="block lg:hidden space-y-6">
-    <div
-      class="block mx-auto w-64 h-64 rounded-full bg-no-repeat bg-cover bg-center border-2 border-black"
-      style="
-        background-image: url('https://res.cloudinary.com/do8ksgdgc/image/upload/v1681195700/IMG_2403-2_gmc4rf.jpg');
-      "
-    />
-    <h1
-      class="text-2xl md:text-5xl text-center font-bold font-poppins text-indigo-900 leading-tight"
-    >
-      Inclusive Design &amp;<br />
-      Full-stack Software Development
-    </h1>
-
-    <p
-      class="text-xl text-left md:text-center md:px-24 font-worksans leading-relaxed"
-    >
-      I'm a full-stack developer, freelancer, and managing director of
-      Xplorebits HQ from India.
-    </p>
-    <p
-      class="text-xl text-left md:text-center md:px-24 font-worksans leading-relaxed"
-    >
-      I work with companies and agencies around the globe, building full-stack
-      web applications and digital products using JavaScript frameworks and
-      technologies.
-    </p>
-  </section>
+  </div>
 </template>
 
 <script setup>
+const { $dateTime } = useNuxtApp();
+
 definePageMeta({
   layout: "xplore",
+});
+
+const articlesRow = ref([]);
+
+const articles = computed(() => {
+  return articlesRow.value.map((x) => ({
+    ...x,
+    timeString: $dateTime.fromMillis(x.timestamp).toFormat("MMM d, yyyy"),
+  }));
+});
+
+onMounted(() => {
+  queryContent("articles")
+    .only(["title", "description", "timestamp", "_path", "imageUrl"])
+    .sort({ timestamp: -1 })
+    .limit(10)
+    .find()
+    .then((res) => {
+      articlesRow.value = res;
+    });
 });
 </script>
