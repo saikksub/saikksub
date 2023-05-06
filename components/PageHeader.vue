@@ -1,6 +1,9 @@
 <template>
   <div class="h-10 flex items-center border-b">
-    <p class="font-semibold font-poppins text-sm">Kiran Sai Subramanyam K</p>
+    <p class="hidden md:block font-semibold font-poppins text-sm">
+      Kiran Sai Subramanyam K
+    </p>
+    <p class="block md:hidden font-semibold font-poppins text-sm">Kiran Sai</p>
 
     <div class="grow" />
 
