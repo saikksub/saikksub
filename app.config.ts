@@ -1,6 +1,6 @@
 export default defineAppConfig({
   alpine: {
-    title: 'Alpine',
+    title: 'Saikksub',
     description: 'The minimalist blog theme',
     image: {
       src: '/social-card-preview.png',
@@ -13,7 +13,7 @@ export default defineAppConfig({
       logo: {
         path: '/logo.svg', // path of the logo
         pathDark: '/logo-dark.svg', // path of the logo in dark mode, leave this empty if you want to use the same logo
-        alt: 'alpine' // alt of the logo
+        alt: 'saikksub' // alt of the logo
       }
     },
     footer: {
