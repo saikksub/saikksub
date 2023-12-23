@@ -5,12 +5,12 @@ import '@/styles/tailwind.css'
 
 export const metadata = {
   title: {
-    template: '%s - Spencer Sharp',
+    template: '%s - Kiran Sai K',
     default:
-      'Spencer Sharp - Software designer, founder, and amateur astronaut',
+      'Kiran Sai K - Full-stack engineer, Freelancer, Founder',
   },
   description:
-    'I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms.',
+    `I’m Kiran Sai, a full-stack software engineer and a freelancer from India. I'm known for professionalism and a positive attitude. I really get what clients need and work hard to deliver more than they expect. I've helped a lot of people with their website and app needs, making sure everything is easy to use and works well.`,
   alternates: {
     types: {
       'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
