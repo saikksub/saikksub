@@ -1,31 +1,42 @@
-# Hello, I'm Kiran Sai Subramanyam K 👋
+# Spotlight
 
-## About Me
+Spotlight is a [Tailwind UI](https://tailwindui.com) site template built using [Tailwind CSS](https://tailwindcss.com) and [Next.js](https://nextjs.org).
 
-- 🌟 I'm a passionate tech geek and a full-stack developer with a flair for creating elegant solutions in the least amount of time.
-- 💼 Currently working as a Senior Software Engineer at Pillar.io, where I'm part of a highly focused development team.
-- 🏅 A top-rated freelancer on Upwork since 2017, I have completed over 53 jobs, specializing in Vue.js, React.js, and full-stack development.
-- 🌍 Based in Anantapur, India, I have over 6 years of professional experience in developing and deploying cross-platform software applications.
-- 🎯 My goal is to solve complex problems by writing efficient algorithms and programs, contributing to mutual growth and success.
+## Getting started
 
-## My Expertise
+To get started with this template, first install the npm dependencies:
 
-- **Languages and Frameworks:** Expertise in Vue.js, React.js, and various full-stack technologies.
-- **Problem Solving:** Skilled in writing algorithms and programs for complex problem-solving.
-- **Remote Work:** Experienced in working remotely, delivering quality work within time constraints.
+```bash
+npm install
+```
 
-## Achievements
+Next, create a `.env.local` file in the root of your project and set the `NEXT_PUBLIC_SITE_URL` variable to your site's public URL:
 
-- 🚀 Successfully completed numerous projects as a freelancer on Upwork, earning top ratings for quality and reliability.
-- 📈 Contributed significantly to the development of scalable and efficient software solutions at Pillar.io.
+```
+NEXT_PUBLIC_SITE_URL=https://example.com
+```
 
-## Let's Connect!
+Next, run the development server:
 
-- 💬 Feel free to reach out to me for collaboration, freelance opportunities, or just for a chat about technology and software development.
-- 📧 Email: - 📧 Email: [saikksub@gmail.com](mailto:saikksub@gmail.com)
-- 🔗 LinkedIn: [in/saikksub](www.linkedin.com/in/saikksub)
-- 🐙 GitHub: `@saikksub`
+```bash
+npm run dev
+```
 
----
+Finally, open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
 
-_“Dedicated to crafting solutions that make a difference. Let's build something amazing together!”_
+## Customizing
+
+You can start editing this template by modifying the files in the `/src` folder. The site will auto-update as you edit these files.
+
+## License
+
+This site template is a commercial product and is licensed under the [Tailwind UI license](https://tailwindui.com/license).
+
+## Learn more
+
+To learn more about the technologies used in this site template, see the following resources:
+
+- [Tailwind CSS](https://tailwindcss.com/docs) - the official Tailwind CSS documentation
+- [Next.js](https://nextjs.org/docs) - the official Next.js documentation
+- [Headless UI](https://headlessui.dev) - the official Headless UI documentation
+- [MDX](https://mdxjs.com) - the MDX documentation
