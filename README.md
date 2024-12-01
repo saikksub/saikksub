@@ -1,6 +1,6 @@
 # This is Sai!
 
-* Freelancer by work 💼
+* Software Engineer by profession 💼
 * Entrepreneur by mind 🧠 
 * Software Engineer by Heart ❤️
 
