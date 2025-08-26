@@ -3,3 +3,7 @@
 
 export const SITE_TITLE = 'Kiran Sai Subramanyam K';
 export const SITE_DESCRIPTION = 'Welcome to my website!';
+export const NAV_ITEMS = [
+  { to: '/about', text: 'About' },
+  { to: '/projects', text: 'Projects' }
+]

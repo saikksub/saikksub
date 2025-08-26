@@ -1,15 +1,22 @@
 ---
-import { SITE_TITLE } from '../consts';
+import { SITE_TITLE, NAV_ITEMS } from '../consts';
 import HeaderLink from './HeaderLink.astro';
+
+const currentPath = Astro.url.pathname;
 ---
 
 <header>
-	<nav class="h-16 mx-auto block max-w-screen-lg flex items-center gap-3">
+	<nav class="h-16 mx-auto block max-w-screen-lg flex items-center gap-3 px-6 lg:px-0">
 		<a href="/" class="!text-black text-lg">{SITE_TITLE}</a>
 
 		<div class="grow" />
 
-		<a href="/about" class="!text-black">About</a>
-		<a href="/projects" class="!text-black">Projects</a>
+		{
+			NAV_ITEMS.map((item) => (
+				<a href={item.to} class:list={[ currentPath === item.to ? "!text-black" : "!text-zinc-400" ]}>
+					{item.text}
+				</a>
+			))
+		}
 	</nav>
 </header>
